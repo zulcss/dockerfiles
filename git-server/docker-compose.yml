@@ -1,0 +1,11 @@
+version: '2'
+services:
+ git-server:
+  build: .
+  container_name: git
+  ports:
+   - "2222:22"
+   - "8080:8080"
+  volumes:
+   - ~/git-server/keys:/git-server/keys
+   - ~/git-server/repos:/git-server/repos

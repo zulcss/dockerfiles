@@ -1,0 +1,7 @@
+Basic Usage
+
+docker run -d -p 2222:22 -v ~/git-server/keys:/git-server/keys -v ~/git-server/repos/:/git-server/repos git
+
+How to use a public key:
+
+cp ~/.ssh/id_rsa.pub ~/git-server/keys
