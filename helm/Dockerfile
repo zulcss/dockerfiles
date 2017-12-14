@@ -2,7 +2,8 @@ from ubuntu:latest
 
 run apt-get update && \
     apt-get -y dist-upgrade && \
-    apt-get -y install git curl
+    apt-get -y --no-install-recommends install git curl vim ca-certificates && \
+    rm -rf /var/lib/apt/lists/* 
 
 env HELM_VERSION v2.7.2
 
