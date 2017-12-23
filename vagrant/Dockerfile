@@ -3,14 +3,14 @@ from ubuntu:latest
 run apt-get update && \
     apt-get -y upgrade && \
     apt-get -y install \
-	ruby \
+    --no-install-recommends \
 	ruby-dev \
 	build-essential \
 	pkg-config \
-        libxslt-dev \
-        libvirt-dev \
-        ruby-fog \
-        zlib1g-dev \
+    libxslt-dev \
+    libxml2-dev \
+    libvirt-dev \
+    zlib1g-dev \
    && rm -rf /var/lib/apt/lists/*
 
 env VAGRANT_VERSION 2.0.1
