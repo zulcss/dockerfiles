@@ -6,5 +6,5 @@ run apk --no-cache add bash tinc && \
 expose 655/tcp 655/udp
 volume /etc/tinc
 
-entrypoint ["/usr/sbin/tincd", "-D"]
-cmd ["-d"]
+entrypoint ["/usr/sbin/tincd"]
+cmd ["start" "-D", "-U" "nobody"]
