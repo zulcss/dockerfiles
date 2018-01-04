@@ -18,4 +18,4 @@ run set -x \
 workdir /root
 env PATH $PATH:/usr/src/google-cloud-sdk/bin
 
-entrypoint ["/usr/src/google-cloud-sdk/bin/gcloud"]
+entrypoint ["gcloud"]
