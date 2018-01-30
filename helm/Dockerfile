@@ -5,7 +5,7 @@ run apt-get update && \
     apt-get -y --no-install-recommends install git curl vim ca-certificates && \
     rm -rf /var/lib/apt/lists/* 
 
-env HELM_VERSION v2.8.0
+env HELM_VERSION v2.7.2
 
 # Install helm
 add https://storage.googleapis.com/kubernetes-helm/helm-${HELM_VERSION}-linux-amd64.tar.gz /srv/helm-${HELM_VERSION}-linux-amd64.tar.gz
