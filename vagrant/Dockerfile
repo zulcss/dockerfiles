@@ -13,7 +13,7 @@ run apt-get update && \
     zlib1g-dev \
    && rm -rf /var/lib/apt/lists/*
 
-env VAGRANT_VERSION 2.0.1
+env VAGRANT_VERSION 2.0.2
 
 add https://releases.hashicorp.com/vagrant/${VAGRANT_VERSION}/vagrant_${VAGRANT_VERSION}_x86_64.deb /srv/vagrant_${VAGRANT_VERSION}_x86_64.deb
 
