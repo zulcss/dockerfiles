@@ -11,6 +11,9 @@ run apt-get update && \
     libxml2-dev \
     libvirt-dev \
     zlib1g-dev \
+    libvirt-bin \
+    openssh-client \
+    libvirt-dev \
    && rm -rf /var/lib/apt/lists/*
 
 env VAGRANT_VERSION 2.0.2
@@ -18,6 +21,8 @@ env VAGRANT_VERSION 2.0.2
 add https://releases.hashicorp.com/vagrant/${VAGRANT_VERSION}/vagrant_${VAGRANT_VERSION}_x86_64.deb /srv/vagrant_${VAGRANT_VERSION}_x86_64.deb
 
 run dpkg -i /srv/vagrant_${VAGRANT_VERSION}_x86_64.deb && \
-	vagrant plugin install vagrant-libvirt
+	vagrant plugin install vagrant-libvirt && \
+    rm -f /srv/vagrant_${VAGRANT_VERSION}_x86_64.deb && \
+    rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT ["vagrant"]
